@@ -11,12 +11,12 @@ app.get('/movie/:movie',function(req,res)
     let actors = [];
     Promise.all([movieSelector(moviename), actorSelector(moviename)])
     .then(function (result) {
-        let releasedate = result[0][0][0].releasedate;
-        let studio = result[0][0][0].studio;
+        releasedate = result[0][0][0].releasedate;
+        studio = result[0][0][0].studio;
         for(i=0; i < result[1][0].length; i++)
       {
-            actors.push(result[1][0][i].actor_name);
-        } 
+          actors.push(result[1][0][i].actor_name);
+      } 
         let finalResult={movie:moviename,releasedate:releasedate,studio:studio,actors:actors};
         res.send(finalResult); 
     })

@@ -77,7 +77,7 @@ function movieSelector(movie)
 }    
 function actorSelector(movie)
 {
-    const query = `select actor_name from actors_check where movie_name='${movie}'`;
+    const query = `select distinct(actor_name) from actors_check where movie_name='${movie}'`;
     return sequelize.query(query);
 }
 module.exports={fetchMovieDb,dispresult,addActors,addMovieActors,movieSelector,actorSelector};

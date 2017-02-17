@@ -1,0 +1,17 @@
+{
+  "name": "movieparser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "movieData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
